@@ -20,3 +20,7 @@ install(DIRECTORY resource
 install(PROGRAMS scripts/rqt_graph
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+if (WIN32)
+  add_windows_python_exe_helper(rqt_graph)
+endif()
